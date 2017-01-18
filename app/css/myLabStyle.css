@@ -1,0 +1,91 @@
+/*.font-face(@fontname, @fontstyle, @path) {
+  @font-face {
+    font-family: '@{fontname}';
+    font-weight: @fontstyle;
+    font-style: @fontstyle;
+    src:url('@{path}.eot');
+    src:url('@{path}.eot?#iefix') format('embedded-opentype'),
+        url('@{path}.woff') format('woff'),
+        url('@{path}.ttf') format('truetype'),
+        url('@{path}.svg#icon') format('svg');
+  }
+}*/
+@font-face {
+  font-family: 'Hind-Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Hind-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind-Light';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Hind-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind-Medium';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Hind-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Hind-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind-Semibold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Hind-Semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora-Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Lora-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora-BoldItalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Lora-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora-Italic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/font_hind/Lora-Regular.ttf') format('truetype');
+}
+/*-------------------------------------------------------------start-------------------------------------------------------------*/
+.start {
+  position: relative;
+  max-height: 800px;
+  background: url('../img/startBg.jpg') left top / cover no-repeat;
+  height: 100vh;
+}
+.start .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.start .header .navbar {
+  background: transparent;
+  border: none;
+}
+.start .header .navbar .navbar-header .navbar-toggle {
+  border: 1px solid #fff;
+}
+.start .header .navbar .navbar-header .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
