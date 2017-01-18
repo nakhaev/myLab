@@ -50,12 +50,26 @@
 			background: transparent;
 			border: none;
 			.navbar-header {
+				.navbar-brand {
+					background: url('../img/logoImg.png') left center no-repeat;
+					padding: 0 0 0 42px;
+					line-height: 50px;
+				}
 				.navbar-toggle {
 					border: 1px solid #fff;
 					.icon-bar {
 						background-color: #fff;
 					}
 				}
+			}
+			.navbar-nav > li > a {
+				color: #fff;
+				text-transform: uppercase;
+				font: 14px/24px 'Hind-Semibold';
+			}
+			.navbar-nav > .active > a {
+				background: transparent;
+				border-bottom: 2px solid #03a9f4;
 			}
 		}
 	}
