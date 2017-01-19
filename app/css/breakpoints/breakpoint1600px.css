@@ -1,0 +1,53 @@
+.container {
+  width: 1600px;
+}
+.start .header {
+  max-width: 1440px;
+  margin: auto;
+}
+.start .header .navbar .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.start .header .navbar .container-fluid .navbar-nav > li > a {
+  padding: 0 18px;
+  margin-top: 16px;
+}
+.start .greeting-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 4;
+  color: #fff;
+}
+.start .greeting-wrapper .greeting {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 940px;
+}
+.start .greeting-wrapper .greeting .welcome {
+  font: 24px/24px 'Hind-Regular';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.start .greeting-wrapper .greeting .welcome .bold {
+  font: 24px/24px 'Hind-Semibold';
+}
+.start .greeting-wrapper .greeting .tagline {
+  font: 42px/42px 'Hind-Semibold';
+  letter-spacing: 2px;
+}
+.start .greeting-wrapper .greeting p {
+  font: 18px/36px 'Hind-Regular';
+  letter-spacing: 1px;
+}
+.start .greeting-wrapper .greeting .btn-info {
+  font: 13px/48px 'Hind-Semibold';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 33px;
+  vertical-align: middle;
+}

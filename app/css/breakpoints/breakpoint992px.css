@@ -1,0 +1,32 @@
+/*---------------------------------------------start---------------------------------------------*/
+.start {
+  padding-top: 34px;
+}
+.start .header .navbar .navbar-header {
+  text-align: center;
+  display: block;
+  float: left;
+}
+.start .header .navbar .navbar-header .navbar-brand {
+  float: left;
+}
+.start .header .navbar .navbar-nav {
+  float: right;
+}
+.start .header .navbar .navbar-nav > li {
+  background: transparent;
+}
+.start .header .navbar .navbar-nav > li > a {
+  padding: 0 8px;
+}
+.start .greeting-wrapper .greeting .welcome {
+  margin: 0 0 30px 0;
+}
+.start .greeting-wrapper .greeting .tagline {
+  margin-bottom: 30px;
+}
+.start .greeting-wrapper .greeting p {
+  font: 18px/24px 'Hind-Regular';
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}

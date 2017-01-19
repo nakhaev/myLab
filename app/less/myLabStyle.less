@@ -34,7 +34,7 @@
 .font-face('Lora-Italic', normal, '../fonts/font_hind/Lora-Italic');
 .font-face('Lora-Regular', normal, '../fonts/font_hind/Lora-Regular');
 
-/*-------------------------------------------------------------start-------------------------------------------------------------*/
+/*---------------------------------------------start---------------------------------------------*/
 .start {
 	position: relative;
 	max-height: 800px;
@@ -65,11 +65,18 @@
 			}
 			.navbar-nav > li {
 				background: rgba(0, 0, 0, 0.9);
+				.search {
+					background: url('../img/search-ico.png') right center no-repeat;
+					text-indent: 99999px;
+					padding-left: 10px;
+					width: 50px;
+				}
 			}
 			.navbar-nav > li > a {
 				color: #fff;
 				text-transform: uppercase;
-				font: 14px/24px 'Hind-Semibold';
+				font: 13px/24px 'Hind-Semibold';
+				letter-spacing: 1px;
 			}
 			.navbar-nav > .active > a {
 				background: transparent;
@@ -102,9 +109,10 @@
 			.tagline {
 				font: 42px/42px 'Hind-Semibold';
 				letter-spacing: 2px;
+				text-transform: uppercase;
 			}
 			p {
-				font: 18px/24px 'Hind-Regular'; //18px/24px
+				font: 18px/24px 'Hind-Regular';
 				letter-spacing: 2px;
 			}
 			.btn-info {
@@ -181,4 +189,22 @@
 		}	
 	}
 }
+
+@media screen and (min-width: 768px) {
+	@import "breakpoints/breakpoint768px.less";
+}
+
+@media screen and (min-width: 992px) {
+	@import "breakpoints/breakpoint992px.less";
+}
+
+@media screen and (min-width: 1170px) {
+	@import "breakpoints/breakpoint1170px.less";
+}
+
+@media screen and (min-width: 1600px) {
+	@import "breakpoints/breakpoint1600px.less";
+}
+
+
 		

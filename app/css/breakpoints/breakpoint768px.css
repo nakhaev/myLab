@@ -1,0 +1,18 @@
+/*---------------------------------------------start---------------------------------------------*/
+.start .header .navbar .navbar-header {
+  text-align: center;
+  display: block;
+  float: none;
+}
+.start .header .navbar .navbar-header .navbar-brand {
+  float: none;
+}
+.start .header .navbar .navbar-nav > li {
+  background: transparent;
+}
+.start .header .navbar .navbar-nav > li .search {
+  border-left: 1px solid #fff;
+}
+.start .header .navbar .navbar-nav > li > a {
+  padding: 0 8px;
+}
