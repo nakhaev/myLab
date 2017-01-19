@@ -67,7 +67,7 @@
 				background: rgba(0, 0, 0, 0.9);
 				.search {
 					background: url('../img/search-ico.png') right center no-repeat;
-					text-indent: 99999px;
+					color: transparent;
 					padding-left: 10px;
 					width: 50px;
 				}
@@ -187,6 +187,53 @@
 				z-index: 100;
 			}
 		}	
+	}
+}
+
+/*-----------------------------------------capabilities-----------------------------------------*/
+
+.capabilities {
+	padding: 0;
+	ul {
+		margin-left: 0;
+		li {
+			text-align: center;
+			padding: 40px 15px 15px 15px;
+			background: #f0fafe;
+			.ico {
+				width: 70px;
+				height: 70px;
+				background: @mainBlue;
+				color: #fff;
+				font-size: 30px;
+				line-height: 70px;
+				text-align: center;
+				border-radius: 3px;
+			}
+			h2 {
+				font: 18px/46px 'Hind-Semibold';
+				text-transform: uppercase;
+			}
+			p {
+				font: 16px/30px 'Hind-Regular';
+				color: #727272;
+			}
+			a {
+				font: 14px/30px 'Hind-Semibold';
+				text-transform: uppercase;
+				color: @mainBlue;
+				span {
+					font-size: 14px;
+				}
+			}
+			a:hover {
+				color: @mainOrange;
+				text-decoration: none;
+			}
+		}
+		li:nth-child(even) {
+			background: #f7fcff;
+		}
 	}
 }
 

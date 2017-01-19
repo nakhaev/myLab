@@ -103,7 +103,7 @@
 }
 .start .header .navbar .navbar-nav > li .search {
   background: url('../img/search-ico.png') right center no-repeat;
-  text-indent: 99999px;
+  color: transparent;
   padding-left: 10px;
   width: 50px;
 }
@@ -215,6 +215,52 @@
   background: rgba(33, 33, 33, 0.6);
   z-index: 100;
 }
+/*-----------------------------------------capabilities-----------------------------------------*/
+.capabilities {
+  padding: 0;
+}
+.capabilities ul {
+  margin-left: 0;
+}
+.capabilities ul li {
+  text-align: center;
+  padding: 40px 15px 15px 15px;
+  background: #f0fafe;
+}
+.capabilities ul li .ico {
+  width: 70px;
+  height: 70px;
+  background: #03a9f4;
+  color: #fff;
+  font-size: 30px;
+  line-height: 70px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+.capabilities ul li h2 {
+  font: 18px/46px 'Hind-Semibold';
+  text-transform: uppercase;
+}
+.capabilities ul li p {
+  font: 16px/30px 'Hind-Regular';
+  color: #727272;
+}
+.capabilities ul li a {
+  font: 14px/30px 'Hind-Semibold';
+  text-transform: uppercase;
+  color: #03a9f4;
+}
+.capabilities ul li a span {
+  font-size: 14px;
+}
+.capabilities ul li a:hover {
+  color: #ff9800;
+  text-decoration: none;
+}
+.capabilities ul li:nth-child(even) {
+  background: #f7fcff;
+}
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
   .start .header .navbar .navbar-header {
@@ -234,6 +280,7 @@
   .start .header .navbar .navbar-nav > li > a {
     padding: 0 8px;
   }
+  /*-----------------------------------------capabilities-----------------------------------------*/
 }
 @media screen and (min-width: 992px) {
   /*---------------------------------------------start---------------------------------------------*/
@@ -268,11 +315,13 @@
     letter-spacing: 2px;
     margin-bottom: 30px;
   }
+  /*-----------------------------------------capabilities-----------------------------------------*/
 }
 @media screen and (min-width: 1170px) {
   .start .header .navbar .navbar-nav > li > a {
     padding: 0 15px;
   }
+  /*-----------------------------------------capabilities-----------------------------------------*/
 }
 @media screen and (min-width: 1600px) {
   .container {
@@ -290,42 +339,11 @@
     padding: 0 18px;
     margin-top: 16px;
   }
-  .start .greeting-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    z-index: 4;
-    color: #fff;
-  }
   .start .greeting-wrapper .greeting {
-    display: inline-block;
-    vertical-align: middle;
     max-width: 940px;
   }
-  .start .greeting-wrapper .greeting .welcome {
-    font: 24px/24px 'Hind-Regular';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .start .greeting-wrapper .greeting .welcome .bold {
-    font: 24px/24px 'Hind-Semibold';
-  }
-  .start .greeting-wrapper .greeting .tagline {
-    font: 42px/42px 'Hind-Semibold';
-    letter-spacing: 2px;
-  }
   .start .greeting-wrapper .greeting p {
-    font: 18px/36px 'Hind-Regular';
     letter-spacing: 1px;
   }
-  .start .greeting-wrapper .greeting .btn-info {
-    font: 13px/48px 'Hind-Semibold';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 0 33px;
-    vertical-align: middle;
-  }
+  /*-----------------------------------------capabilities-----------------------------------------*/
 }

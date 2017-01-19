@@ -28,6 +28,11 @@ gulp.task('css-lib', function() {
         .pipe(gulp.dest('app/css'));
 });
 
+gulp.task('font-lib', function() {
+    return gulp.src('bower_components/bootstrap/fonts/*.*')
+        .pipe(gulp.dest('app/fonts'));
+});
+
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -37,7 +42,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('watch', ['browser-sync', 'js-lib', 'css-lib'], function() {
+gulp.task('watch', ['browser-sync', 'js-lib', 'css-lib', 'font-lib'], function() {
     gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch('app/**/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
