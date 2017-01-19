@@ -68,16 +68,11 @@
 .start {
   position: relative;
   max-height: 800px;
-  background: url('../img/startBg.jpg') left top / cover no-repeat;
   height: 100vh;
 }
-.start .mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
+.start .header {
+  position: relative;
+  z-index: 5;
 }
 .start .header .navbar {
   background: transparent;
@@ -86,13 +81,25 @@
 .start .header .navbar .navbar-header .navbar-brand {
   background: url('../img/logoImg.png') left center no-repeat;
   padding: 0 0 0 42px;
-  line-height: 50px;
+  color: #fff;
+  font: 30px/50px 'Hind-Regular';
 }
-.start .header .navbar .navbar-header .navbar-toggle {
+.start .header .navbar .navbar-header .navbar-brand .bold {
+  font: 30px/50px 'Hind-Semibold';
+}
+.start .header .navbar .navbar-header .navbar-toggle,
+.start .header .navbar .navbar-header .navbar-toggle:hover,
+.start .header .navbar .navbar-header .navbar-toggle:focus {
   border: 1px solid #fff;
+  background: transparent;
 }
-.start .header .navbar .navbar-header .navbar-toggle .icon-bar {
+.start .header .navbar .navbar-header .navbar-toggle .icon-bar,
+.start .header .navbar .navbar-header .navbar-toggle:hover .icon-bar,
+.start .header .navbar .navbar-header .navbar-toggle:focus .icon-bar {
   background-color: #fff;
+}
+.start .header .navbar .navbar-nav > li {
+  background: rgba(0, 0, 0, 0.9);
 }
 .start .header .navbar .navbar-nav > li > a {
   color: #fff;
@@ -102,4 +109,101 @@
 .start .header .navbar .navbar-nav > .active > a {
   background: transparent;
   border-bottom: 2px solid #03a9f4;
+}
+.start .greeting-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 4;
+  color: #fff;
+}
+.start .greeting-wrapper .greeting {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 95%;
+}
+.start .greeting-wrapper .greeting .welcome {
+  font: 24px/24px 'Hind-Regular';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.start .greeting-wrapper .greeting .welcome .bold {
+  font: 24px/24px 'Hind-Semibold';
+}
+.start .greeting-wrapper .greeting .tagline {
+  font: 42px/42px 'Hind-Semibold';
+  letter-spacing: 2px;
+}
+.start .greeting-wrapper .greeting p {
+  font: 18px/24px 'Hind-Regular';
+  letter-spacing: 2px;
+}
+.start .greeting-wrapper .greeting .btn-info {
+  background: #03a9f4;
+  font: 13px/48px 'Hind-Semibold';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 33px;
+  vertical-align: middle;
+}
+.start .greeting-wrapper::before {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  vertical-align: middle;
+}
+.start .carousel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.start .carousel .carousel-indicators li {
+  width: 9px;
+  height: 9px;
+  -webkit-border-radius: 1px;
+          border-radius: 1px;
+  margin: 0 5px;
+  background: #b6b6b6;
+  border-color: #b6b6b6;
+}
+.start .carousel .carousel-indicators li:nth-child(odd) {
+  background: #ff9800;
+  border-color: #ff9800;
+}
+.start .carousel .carousel-indicators li.active {
+  background: #03a9f4;
+  border-color: #03a9f4;
+}
+.start .carousel .carousel-inner .item .bg-slide {
+  height: 100vh;
+  max-height: 800px;
+}
+.start .carousel .carousel-inner .item .slide1 {
+  background: url('../img/slide1.jpg') left top / cover no-repeat;
+}
+.start .carousel .carousel-inner .item .slide2 {
+  background: url('../img/slide2.jpg') left top / cover no-repeat;
+}
+.start .carousel .carousel-inner .item .slide3 {
+  background: url('../img/slide3.jpg') center top / cover no-repeat;
+}
+.start .carousel .carousel-inner .item .slide4 {
+  background: url('../img/slide4.jpg') center top / cover no-repeat;
+}
+.start .carousel .carousel-inner .item::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(33, 33, 33, 0.6);
+  z-index: 100;
 }
