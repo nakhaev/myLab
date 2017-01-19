@@ -65,7 +65,7 @@
 			}
 			.navbar-nav > li {
 				background: rgba(0, 0, 0, 0.9);
-				.search {
+				.search, .search:hover {
 					background: url('../img/search-ico.png') right center no-repeat;
 					color: transparent;
 					padding-left: 10px;
@@ -77,6 +77,9 @@
 				text-transform: uppercase;
 				font: 13px/24px 'Hind-Semibold';
 				letter-spacing: 1px;
+			}
+			.navbar-nav > li > a:hover {
+				color: @mainOrange;
 			}
 			.navbar-nav > .active > a {
 				background: transparent;
@@ -213,17 +216,22 @@
 			h2 {
 				font: 18px/46px 'Hind-Semibold';
 				text-transform: uppercase;
+				letter-spacing: 2px;
+			    margin-top: 23px;
+			    margin-bottom: 14px;
 			}
 			p {
 				font: 16px/30px 'Hind-Regular';
 				color: #727272;
+				margin-bottom: 28px;
 			}
 			a {
-				font: 14px/30px 'Hind-Semibold';
+				font: 13px/30px 'Hind-Semibold';
 				text-transform: uppercase;
 				color: @mainBlue;
+				letter-spacing: 2px;
 				span {
-					font-size: 14px;
+					font-size: 13px;
 				}
 			}
 			a:hover {
