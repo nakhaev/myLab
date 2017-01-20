@@ -16,4 +16,11 @@
 .start .header .navbar .navbar-nav > li > a {
   padding: 0 8px;
 }
-/*-----------------------------------------capabilities-----------------------------------------*/
+/*-----------------------------------------portfolio-----------------------------------------*/
+.portfolio .tabWrap .nav-tabs li {
+  float: left;
+  padding-top: 0;
+}
+.portfolio .tabWrap .nav-tabs li a {
+  font: 13px/24px 'Hind-Semibold';
+}
