@@ -270,6 +270,47 @@
 .capabilities ul li:nth-child(even) {
   background: #f7fcff;
 }
+/*-----------------------------------------portfolio-----------------------------------------*/
+.portfolio {
+  text-align: center;
+  padding-top: 58px;
+}
+.portfolio h2 {
+  font: 36px/36px 'Hind-Semibold';
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.portfolio p {
+  font: 16px/30px 'Hind-Regular';
+  max-width: 770px;
+  margin: auto;
+  color: #9f9f9f;
+  margin-bottom: 33px;
+}
+.portfolio .nav-tabs li a {
+  font: 14px/24px 'Hind-Semibold';
+  color: #03a9f4;
+  text-transform: uppercase;
+  border: none;
+}
+.portfolio .nav-tabs li a:hover {
+  color: #ff9800;
+}
+.portfolio .nav-tabs li.active {
+  border-bottom: 2px solid #03a9f4;
+}
+.portfolio .nav-tabs li.active a {
+  color: #212121;
+}
+.portfolio .nav-tabs .nav-tabs > li.active > a,
+.portfolio .nav-tabs .nav-tabs > li.active > a:hover,
+.portfolio .nav-tabs .nav-tabs > li.active > a:focus {
+  border: none;
+}
+.portfolio .tab-content .tab-pane .img-resp {
+  width: 100%;
+  min-height: auto;
+}
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
   .start .header .navbar .navbar-header {

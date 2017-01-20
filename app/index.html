@@ -108,7 +108,33 @@
     <section class="container portfolio">
       <h2>our portfolio</h2>
       <p>Lorem Ipsum is simply dummy of the printing and typesetting 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and it to make a type specimen book.</p>
-    </section>
+      <div class="tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">all</a></li>
+          <li role="presentation" class="active"><a href="#web" aria-controls="web" role="tab" data-toggle="tab">web design</a></li>
+          <li role="presentation"><a href="#graphics" aria-controls="graphics" role="tab" data-toggle="tab">Graphics design</a></li>
+          <li role="presentation"><a href="#logo" aria-controls="logo" role="tab" data-toggle="tab">logo</a></li>
+          <li role="presentation"><a href="#photography" aria-controls="photography" role="tab" data-toggle="tab">photography</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane col-xs-12 col-sm-6 col-md-3 active" id="web"><img class="img-resp" src="img/pfSlide1.jpg">
+          </div>
+          <div role="tabpanel" class="tab-pane col-xs-12 col-sm-6 col-md-3" id="graphics">
+            <div class="group">
+              <div class="col-xs-6"><img class="img-resp" src="img/pfSlide1.jpg"></div>
+              <div class="col-xs-6"><img class="img-resp" src="img/pfSlide1.jpg"></div>
+              <div class="col-xs-12"><img class="img-resp" src="img/pfSlide1.jpg"></div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane col-xs-12 col-sm-6 col-md-3" id="logo">logo</div>
+          <div role="tabpanel" class="tab-pane col-xs-12 col-sm-6 col-md-3" id="photography">photography</div>
+        </div>
+
+      </div>
+    </section><!-- /portfolio -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
