@@ -475,18 +475,42 @@
 							color: #fff;
 							padding: 30px;
 						}
-						.social {
-							
+						.social {							
 							li {
 								padding: 0;
-								width: 25px;
-								height: 25px;
 								border-radius: 3px;
 								background: @mainBlue;
 								a {
+									display: block;
 									color: #fff;
 									text-decoration: none;
 								}
+								.ico {
+									width: 25px;
+									height: 25px;
+									background: url('../img/spritesheet.png') no-repeat;
+								}
+								.ico1 {
+									background-position: -5px -5px;
+								}
+								.ico2 {
+									background-position: -40px -5px;
+								}
+								.ico3 {
+									background-position: -5px -40px;
+								}
+								.ico4 {
+									background-position: -40px -40px;
+								}
+								.ico5 {
+									background-position: -75px -5px;
+								}
+								.ico6 {
+									background-position: -75px -40px;
+								}
+							}
+							li:hover {
+								background: @mainOrange;
 							}
 						}
 					}
