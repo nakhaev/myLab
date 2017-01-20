@@ -448,6 +448,7 @@
 }
 .getStarted .greeting-wrapper .greeting {
   max-width: 930px;
+  width: 95%;
 }
 .getStarted .greeting-wrapper .greeting p {
   font: 22px/42px 'Hind-Regular';
@@ -465,17 +466,21 @@
   z-index: -1;
 }
 /*-----------------------------------------latestNews-----------------------------------------*/
-.latestNews {
+.latestNews,
+.ourTeam {
   text-align: center;
   max-width: 1230px;
+  padding-bottom: 80px;
 }
-.latestNews h2 {
+.latestNews h2,
+.ourTeam h2 {
   font: 36px/36px 'Hind-Semibold';
   text-transform: uppercase;
   padding-bottom: 15px;
   letter-spacing: 4px;
 }
-.latestNews p {
+.latestNews p,
+.ourTeam p {
   font: 16px/30px 'Hind-Regular';
   max-width: 770px;
   margin: auto;
@@ -483,20 +488,86 @@
   margin-bottom: 33px;
   letter-spacing: 1px;
 }
-.latestNews ul li img {
+.latestNews ul li img,
+.ourTeam ul li img {
   margin-bottom: 40px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
 }
-.latestNews ul li .date {
+.latestNews ul li .date,
+.ourTeam ul li .date {
   font: 14px/14px 'Hind-Regular';
 }
-.latestNews ul li a {
+.latestNews ul li a,
+.ourTeam ul li a {
   font: 18px/36px 'Hind-Semibold';
   color: #03a9f4;
   text-decoration: none;
   text-transform: uppercase;
 }
-.latestNews ul li a:hover {
+.latestNews ul li a:hover,
+.ourTeam ul li a:hover {
   color: #ff9800;
+}
+/*-----------------------------------------ourTeam-----------------------------------------*/
+.ourTeam {
+  background: #f0fafe;
+  max-width: 1600px;
+}
+.ourTeam .sub-container {
+  max-width: 1230px;
+  margin: auto;
+  padding-top: 60px;
+}
+.ourTeam .sub-container ul li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ourTeam .sub-container ul li .info {
+  position: relative;
+}
+.ourTeam .sub-container ul li .info .about {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: opacity ease 1s;
+  transition: opacity ease 1s;
+  background: rgba(33, 33, 33, 0.6);
+}
+.ourTeam .sub-container ul li .info .about p {
+  font: 16px/24px 'Hind-Regular';
+  color: #fff;
+  padding: 30px;
+}
+.ourTeam .sub-container ul li .info .about .social li {
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #03a9f4;
+}
+.ourTeam .sub-container ul li .info .about .social li a {
+  color: #fff;
+  text-decoration: none;
+}
+.ourTeam .sub-container ul li .info .about:hover {
+  opacity: 1;
+}
+.ourTeam .sub-container ul li .info img {
+  margin-bottom: 0;
+}
+.ourTeam .sub-container ul li .name {
+  font: 18px/36px 'Hind-Semibold';
+  padding: 35px 0 0 0;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/

@@ -386,6 +386,7 @@
 		background: url('../img/getStartedBg.jpg') center center no-repeat;
 		.greeting {
 			max-width: 930px;
+			width: 95%;
 			p {
 				font: 22px/42px 'Hind-Regular';
 				margin-bottom: 30px;
@@ -405,9 +406,10 @@
 	}
 }
 /*-----------------------------------------latestNews-----------------------------------------*/
-.latestNews {
+.latestNews, .ourTeam {
 	text-align: center;
 	max-width: 1230px;
+	padding-bottom: 80px;
 	h2 {
 		font: 36px/36px 'Hind-Semibold';
 		text-transform: uppercase;
@@ -426,6 +428,7 @@
 		li {
 			img {
 				margin-bottom: 40px;
+				border-radius: 3px;
 			}
 			.date {
 				font: 14px/14px 'Hind-Regular';
@@ -438,6 +441,69 @@
 			}
 			a:hover {
 				color: @mainOrange;
+			}
+		}
+	}
+}
+/*-----------------------------------------ourTeam-----------------------------------------*/
+.ourTeam {
+	background: #f0fafe;
+	max-width: 1600px;
+	.sub-container {
+		max-width: 1230px;
+		margin: auto;
+		padding-top: 60px;
+		ul {		
+			li {
+				padding-left: 15px;
+				padding-right: 15px;
+				.info {
+					position: relative;
+					.about {
+						margin: 0;
+						padding: 0;
+						position: absolute;
+						top: 0;
+						right: 0;
+						left : 0;
+						bottom: 0;
+						opacity: 0;
+						transition: opacity ease 1s;
+						background: rgba(33, 33, 33, 0.6);
+						p{
+							font: 16px/24px 'Hind-Regular';
+							color: #fff;
+							padding: 30px;
+						}
+						.social {
+							
+							li {
+								padding: 0;
+								width: 25px;
+								height: 25px;
+								border-radius: 3px;
+								background: @mainBlue;
+								a {
+									color: #fff;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+					.about:hover {
+							opacity: 1;
+						}
+					img {
+						margin-bottom: 0;
+					}
+				}
+				.name {
+					font: 18px/36px 'Hind-Semibold';
+					padding: 35px 0 0 0;
+					color: #000;
+					text-transform: uppercase;
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}
