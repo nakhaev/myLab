@@ -256,6 +256,8 @@
 	text-align: center;
 	padding-top: 58px;
 	padding-bottom: 64px;
+	padding-left: 0;
+	padding-right: 0;
 	.tabWrap {
 		h2 {
 			font: 36px/36px 'Hind-Semibold';
@@ -377,8 +379,10 @@
 
 /*-----------------------------------------getStarted-----------------------------------------*/
 .getStarted {
+	height: 400px;
+	margin-bottom: 60px;
 	.greeting-wrapper {
-		max-height: 400px;
+		min-height: 400px;
 		background: url('../img/getStartedBg.jpg') center center no-repeat;
 		.greeting {
 			max-width: 930px;
@@ -398,6 +402,44 @@
 		left: 0;
 		background: rgba(33, 33, 33, 0.6);
 		z-index: -1;
+	}
+}
+/*-----------------------------------------latestNews-----------------------------------------*/
+.latestNews {
+	text-align: center;
+	max-width: 1230px;
+	h2 {
+		font: 36px/36px 'Hind-Semibold';
+		text-transform: uppercase;
+		padding-bottom: 15px;
+		letter-spacing: 4px;
+		}
+	p {
+		font: 16px/30px 'Hind-Regular';
+		max-width: 770px;
+		margin: auto;
+		color: #9f9f9f;
+		margin-bottom: 33px;
+		letter-spacing: 1px;
+	}
+	ul {		
+		li {
+			img {
+				margin-bottom: 40px;
+			}
+			.date {
+				font: 14px/14px 'Hind-Regular';
+			}
+			a {
+				font: 18px/36px 'Hind-Semibold';
+				color: @mainBlue;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			a:hover {
+				color: @mainOrange;
+			}
+		}
 	}
 }
 
