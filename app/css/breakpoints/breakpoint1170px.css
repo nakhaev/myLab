@@ -1,4 +1,12 @@
 .start .header .navbar .navbar-nav > li > a {
   padding: 0 15px;
 }
-/*-----------------------------------------capabilities-----------------------------------------*/
+/*-----------------------------------------ourTeam-----------------------------------------*/
+.ourTeam {
+  background: #f0fafe;
+  max-width: 1600px;
+}
+.ourTeam .sub-container ul li .info .about p {
+  font: 16px/24px 'Hind-Regular';
+  padding: 20px;
+}

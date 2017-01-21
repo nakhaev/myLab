@@ -75,6 +75,7 @@
   position: relative;
   max-height: 800px;
   height: 100vh;
+  width: 100vw;
 }
 .start .header,
 .getStarted .header {
@@ -544,6 +545,10 @@
   color: #fff;
   padding: 30px;
 }
+.ourTeam .sub-container ul li .info .about p .name {
+  font: 16px/24px 'Hind-Semibold';
+  color: #b3e5fc;
+}
 .ourTeam .sub-container ul li .info .about .social li {
   padding: 0;
   -webkit-border-radius: 3px;
@@ -655,13 +660,29 @@
     letter-spacing: 2px;
     margin-bottom: 30px;
   }
-  /*-----------------------------------------capabilities-----------------------------------------*/
+  /*-----------------------------------------ourTeam-----------------------------------------*/
+  .ourTeam {
+    background: #f0fafe;
+    max-width: 1600px;
+  }
+  .ourTeam .sub-container ul li .info .about p {
+    font: 14px/20px 'Hind-Regular';
+    padding: 10px;
+  }
 }
 @media screen and (min-width: 1170px) {
   .start .header .navbar .navbar-nav > li > a {
     padding: 0 15px;
   }
-  /*-----------------------------------------capabilities-----------------------------------------*/
+  /*-----------------------------------------ourTeam-----------------------------------------*/
+  .ourTeam {
+    background: #f0fafe;
+    max-width: 1600px;
+  }
+  .ourTeam .sub-container ul li .info .about p {
+    font: 16px/24px 'Hind-Regular';
+    padding: 20px;
+  }
 }
 @media screen and (min-width: 1600px) {
   .container {
@@ -685,5 +706,13 @@
   .start .greeting-wrapper .greeting p {
     letter-spacing: 1px;
   }
-  /*-----------------------------------------capabilities-----------------------------------------*/
+  /*-----------------------------------------ourTeam-----------------------------------------*/
+  .ourTeam {
+    background: #f0fafe;
+    max-width: 1600px;
+  }
+  .ourTeam .sub-container ul li .info .about p {
+    font: 16px/24px 'Hind-Regular';
+    padding: 30px;
+  }
 }

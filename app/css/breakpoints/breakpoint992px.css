@@ -30,4 +30,12 @@
   letter-spacing: 2px;
   margin-bottom: 30px;
 }
-/*-----------------------------------------capabilities-----------------------------------------*/
+/*-----------------------------------------ourTeam-----------------------------------------*/
+.ourTeam {
+  background: #f0fafe;
+  max-width: 1600px;
+}
+.ourTeam .sub-container ul li .info .about p {
+  font: 14px/20px 'Hind-Regular';
+  padding: 10px;
+}
