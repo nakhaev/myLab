@@ -39,6 +39,10 @@
 		width: 100%;
 		min-height: auto;
 	}
+.sub-container {
+	max-width: 1230px;
+	margin: auto;
+}
 
 /*---------------------------------------------start---------------------------------------------*/
 .start, .getStarted {
@@ -407,9 +411,8 @@
 	}
 }
 /*-----------------------------------------latestNews-----------------------------------------*/
-.latestNews, .ourTeam {
+.latestNews, .ourTeam, .ourSkills {
 	text-align: center;
-	max-width: 1230px;
 	padding-bottom: 80px;
 	h2 {
 		font: 36px/36px 'Hind-Semibold';
@@ -534,6 +537,100 @@
 					margin-bottom: 10px;
 				}
 			}
+		}
+	}
+}
+/*-----------------------------------------ourSkills-----------------------------------------*/
+.ourSkills {
+	padding: 58px 0 0 0;
+	p{
+		font: 16px/30px 'Hind-Regular';
+		color: #727272;
+	}
+	.skills {
+		margin-bottom: 13px;
+		li {
+			padding-left: 15px;
+			padding-right: 15px;
+			p {
+				text-align: justify;
+				color: #000;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				font: 18px/36px 'Hind-Semibold';
+			}
+			.persent {
+				text-align: right;
+				margin: -46px 0 0 0;
+			}
+			.scale {
+				height: 25px;
+				background: #b3e5fc;
+				margin-bottom: 32px;
+				.level {
+					width: 95%;
+					height: 25px;
+					background: @mainBlue;
+				} 
+			}
+		}
+	}
+	.skills::after, .achievements::after, .sub-container::after, .centering::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+	.achievements {
+		background: #ff9800;
+		min-height: 330px;
+		position: relative;
+		.centering {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			.centered {
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 95%;
+				ul {
+					margin: 0;
+					li {
+						.achievements-ico {
+							width: 70px;
+							height: 70px;
+							border-radius: 3px;
+							background: #fff;
+							color: @mainOrange;
+							margin: 0;
+						}
+						.quantity {
+							font: 36px/36px 'Hind-Semibold';
+							color: #fff;
+							margin-bottom: 5px;
+						}
+						.description {
+							font: 13px/36px 'Hind-Semibold';
+							color: #fff;
+							text-transform: uppercase;
+							margin: 0;
+						}
+					}
+				}
+				ul::after {
+					display: block;
+					content: "";
+					clear: both;
+				}
+			}
+		}
+		.centering::before {
+			display: inline-block;
+			content: "";
+			height: 100%;
+			vertical-align: middle;
 		}
 	}
 }

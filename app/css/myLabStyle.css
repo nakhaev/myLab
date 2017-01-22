@@ -69,6 +69,10 @@
   width: 100%;
   min-height: auto;
 }
+.sub-container {
+  max-width: 1230px;
+  margin: auto;
+}
 /*---------------------------------------------start---------------------------------------------*/
 .start,
 .getStarted {
@@ -468,20 +472,22 @@
 }
 /*-----------------------------------------latestNews-----------------------------------------*/
 .latestNews,
-.ourTeam {
+.ourTeam,
+.ourSkills {
   text-align: center;
-  max-width: 1230px;
   padding-bottom: 80px;
 }
 .latestNews h2,
-.ourTeam h2 {
+.ourTeam h2,
+.ourSkills h2 {
   font: 36px/36px 'Hind-Semibold';
   text-transform: uppercase;
   padding-bottom: 15px;
   letter-spacing: 4px;
 }
 .latestNews p,
-.ourTeam p {
+.ourTeam p,
+.ourSkills p {
   font: 16px/30px 'Hind-Regular';
   max-width: 770px;
   margin: auto;
@@ -490,24 +496,28 @@
   letter-spacing: 1px;
 }
 .latestNews ul li img,
-.ourTeam ul li img {
+.ourTeam ul li img,
+.ourSkills ul li img {
   margin-bottom: 40px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
 }
 .latestNews ul li .date,
-.ourTeam ul li .date {
+.ourTeam ul li .date,
+.ourSkills ul li .date {
   font: 14px/14px 'Hind-Regular';
 }
 .latestNews ul li a,
-.ourTeam ul li a {
+.ourTeam ul li a,
+.ourSkills ul li a {
   font: 18px/36px 'Hind-Semibold';
   color: #03a9f4;
   text-decoration: none;
   text-transform: uppercase;
 }
 .latestNews ul li a:hover,
-.ourTeam ul li a:hover {
+.ourTeam ul li a:hover,
+.ourSkills ul li a:hover {
   color: #ff9800;
 }
 /*-----------------------------------------ourTeam-----------------------------------------*/
@@ -599,6 +609,102 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+/*-----------------------------------------ourSkills-----------------------------------------*/
+.ourSkills {
+  padding: 58px 0 0 0;
+}
+.ourSkills p {
+  font: 16px/30px 'Hind-Regular';
+  color: #727272;
+}
+.ourSkills .skills {
+  margin-bottom: 13px;
+}
+.ourSkills .skills li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ourSkills .skills li p {
+  text-align: justify;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font: 18px/36px 'Hind-Semibold';
+}
+.ourSkills .skills li .persent {
+  text-align: right;
+  margin: -46px 0 0 0;
+}
+.ourSkills .skills li .scale {
+  height: 25px;
+  background: #b3e5fc;
+  margin-bottom: 32px;
+}
+.ourSkills .skills li .scale .level {
+  width: 95%;
+  height: 25px;
+  background: #03a9f4;
+}
+.ourSkills .skills::after,
+.ourSkills .achievements::after,
+.ourSkills .sub-container::after,
+.ourSkills .centering::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.ourSkills .achievements {
+  background: #ff9800;
+  min-height: 330px;
+  position: relative;
+}
+.ourSkills .achievements .centering {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.ourSkills .achievements .centering .centered {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 95%;
+}
+.ourSkills .achievements .centering .centered ul {
+  margin: 0;
+}
+.ourSkills .achievements .centering .centered ul li .achievements-ico {
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #fff;
+  color: #ff9800;
+  margin: 0;
+}
+.ourSkills .achievements .centering .centered ul li .quantity {
+  font: 36px/36px 'Hind-Semibold';
+  color: #fff;
+  margin-bottom: 5px;
+}
+.ourSkills .achievements .centering .centered ul li .description {
+  font: 13px/36px 'Hind-Semibold';
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.ourSkills .achievements .centering .centered ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.ourSkills .achievements .centering::before {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  vertical-align: middle;
+}
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
   .start .header .navbar .navbar-header {
@@ -625,6 +731,10 @@
   }
   .portfolio .tabWrap .nav-tabs li a {
     font: 13px/24px 'Hind-Semibold';
+  }
+  /*-----------------------------------------ourSkills-----------------------------------------*/
+  .ourSkills .achievements {
+    min-height: 235px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -669,6 +779,13 @@
     font: 14px/20px 'Hind-Regular';
     padding: 10px;
   }
+  /*-----------------------------------------ourSkills-----------------------------------------*/
+  .ourSkills .achievements {
+    min-height: 235px;
+  }
+  .ourSkills .achievements .centering .centered ul li .description {
+    font: 11px/36px 'Hind-Semibold';
+  }
 }
 @media screen and (min-width: 1170px) {
   .start .header .navbar .navbar-nav > li > a {
@@ -682,6 +799,13 @@
   .ourTeam .sub-container ul li .info .about p {
     font: 16px/24px 'Hind-Regular';
     padding: 20px;
+  }
+  /*-----------------------------------------ourSkills-----------------------------------------*/
+  .ourSkills .achievements {
+    min-height: 235px;
+  }
+  .ourSkills .achievements .centering .centered ul li .description {
+    font: 13px/36px 'Hind-Semibold';
   }
 }
 @media screen and (min-width: 1600px) {

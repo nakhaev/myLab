@@ -39,3 +39,10 @@
   font: 14px/20px 'Hind-Regular';
   padding: 10px;
 }
+/*-----------------------------------------ourSkills-----------------------------------------*/
+.ourSkills .achievements {
+  min-height: 235px;
+}
+.ourSkills .achievements .centering .centered ul li .description {
+  font: 11px/36px 'Hind-Semibold';
+}

@@ -24,3 +24,7 @@
 .portfolio .tabWrap .nav-tabs li a {
   font: 13px/24px 'Hind-Semibold';
 }
+/*-----------------------------------------ourSkills-----------------------------------------*/
+.ourSkills .achievements {
+  min-height: 235px;
+}
