@@ -85,6 +85,43 @@
   max-width: 1230px;
   margin: auto;
 }
+.social .social-item {
+  padding: 0!important;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #03a9f4;
+}
+.social .social-item a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.social .social-item .ico {
+  width: 25px;
+  height: 25px;
+  background: url('../img/spritesheet.png') no-repeat;
+}
+.social .social-item .ico1 {
+  background-position: -5px -5px;
+}
+.social .social-item .ico2 {
+  background-position: -40px -5px;
+}
+.social .social-item .ico3 {
+  background-position: -5px -40px;
+}
+.social .social-item .ico4 {
+  background-position: -40px -40px;
+}
+.social .social-item .ico5 {
+  background-position: -75px -5px;
+}
+.social .social-item .ico6 {
+  background-position: -75px -40px;
+}
+.social .social-item:hover {
+  background: #ff9800;
+}
 /*---------------------------------------------start---------------------------------------------*/
 .start,
 .getStarted {
@@ -578,43 +615,6 @@
   font: 16px/24px 'Hind-Semibold';
   color: #b3e5fc;
 }
-.ourTeam .sub-container ul li .info .about .social li {
-  padding: 0;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  background: #03a9f4;
-}
-.ourTeam .sub-container ul li .info .about .social li a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico {
-  width: 25px;
-  height: 25px;
-  background: url('../img/spritesheet.png') no-repeat;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico1 {
-  background-position: -5px -5px;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico2 {
-  background-position: -40px -5px;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico3 {
-  background-position: -5px -40px;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico4 {
-  background-position: -40px -40px;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico5 {
-  background-position: -75px -5px;
-}
-.ourTeam .sub-container ul li .info .about .social li .ico6 {
-  background-position: -75px -40px;
-}
-.ourTeam .sub-container ul li .info .about .social li:hover {
-  background: #ff9800;
-}
 .ourTeam .sub-container ul li .info .about:hover {
   opacity: 1;
 }
@@ -743,6 +743,112 @@
   font: 18px/36px 'Hind-Semibold';
   color: #000;
   text-transform: uppercase;
+}
+/*-----------------------------------------customers-----------------------------------------*/
+.customers {
+  min-height: 400px;
+  background: url('../img/customersBg.jpg') center center no-repeat;
+  position: relative;
+}
+.customers .customers-wrapper {
+  padding: 80px 0 0 0;
+  position: relative;
+  min-height: 400px;
+  text-align: center;
+  z-index: 5;
+}
+.customers .customers-wrapper .customers-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 95%;
+  z-index: 5;
+}
+.customers .customers-wrapper .customers-content h2 {
+  font: 36px/36px 'Hind-Semibold';
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  letter-spacing: 4px;
+  color: #fff;
+}
+.customers .customers-wrapper .customers-content p {
+  font: 22px/42px 'Hind-Regular';
+  margin-bottom: 30px;
+  color: #fff;
+  max-width: 1050px;
+  display: inline-block;
+}
+.customers .customers-wrapper .customers-content ul li {
+  padding: 10px 55px;
+}
+.customers .customers-wrapper::before {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  vertical-align: middle;
+}
+.customers::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(33, 33, 33, 0.6);
+  z-index: 1;
+}
+/*-----------------------------------------summary-----------------------------------------*/
+.summary {
+  font: 16px/30px 'Hind-Regular';
+  color: #b2b2b2;
+  background: #212121;
+  padding-top: 50px;
+}
+.summary .about h2,
+.summary .tweets h2,
+.summary .blog h2 {
+  font: 18px/36px 'Hind-Semibold';
+  text-transform: uppercase;
+  color: #fff;
+}
+.summary .about h2 span,
+.summary .tweets h2 span,
+.summary .blog h2 span {
+  color: #b3e5fc;
+}
+.summary .tweets ul li {
+  margin-bottom: 20px;
+}
+.summary .tweets ul li .colored {
+  color: #03a9f4;
+}
+.summary .tweets ul li .time {
+  color: #535353;
+}
+.summary .tweets ul li:nth-child(even) .colored {
+  color: #ff9800;
+}
+.summary .blog ul li {
+  margin-bottom: 20px;
+}
+.summary .blog ul li img {
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+.summary .blog ul li a,
+.summary .blog ul li a:hover {
+  font: 16px/30px 'Hind-Regular';
+  color: #03a9f4;
+  text-decoration: none;
+  margin: 0 0 20px 0;
+}
+.summary .blog ul li a:hover {
+  color: #ff9800;
+}
+.summary .blog ul li::before {
+  display: block;
+  content: "";
+  clear: both;
 }
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
