@@ -771,7 +771,7 @@
   color: #fff;
 }
 .customers .customers-wrapper .customers-content p {
-  font: 22px/42px 'Hind-Regular';
+  font: 22px/24px 'Hind-Regular';
   margin-bottom: 30px;
   color: #fff;
   max-width: 1050px;
@@ -850,6 +850,35 @@
   content: "";
   clear: both;
 }
+/*-----------------------------------------map-----------------------------------------*/
+.map {
+  position: relative;
+  padding: 0;
+}
+.map .mapWrapper {
+  overflow: hidden;
+}
+.map .history {
+  position: absolute;
+  min-height: 270px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  top: 50px;
+  left: 50px;
+  padding: 40px;
+}
+.map .history p {
+  font: 18px/30px 'Hind-Semibold';
+  text-transform: uppercase;
+}
+.map .history ul li {
+  margin-bottom: 14px;
+  font: 16px/30px 'Hind-Regular';
+}
+.map .history ul li span {
+  font: 16px/30px 'Hind-Semibold';
+}
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
   .start .header .navbar .navbar-header {
@@ -880,6 +909,14 @@
   /*-----------------------------------------ourSkills-----------------------------------------*/
   .ourSkills .achievements {
     min-height: 235px;
+  }
+  /*-----------------------------------------customers-----------------------------------------*/
+  .customers .customers-wrapper .customers-content p {
+    font: 22px/42px 'Hind-Regular';
+  }
+  /*-----------------------------------------map-----------------------------------------*/
+  .map .history {
+    width: 370px;
   }
 }
 @media screen and (min-width: 992px) {
