@@ -1,4 +1,4 @@
-/*.font-face(@fontname, @fontstyle, @path) {
+.font-face(@fontname, @fontstyle, @path) {
   @font-face {
     font-family: '@{fontname}';
     font-weight: @fontstyle;
@@ -9,16 +9,16 @@
         url('@{path}.ttf') format('truetype'),
         url('@{path}.svg#icon') format('svg');
   }
-}*/
+}
 
-.font-face(@fontname, @fontstyle, @path) {
+/*.font-face(@fontname, @fontstyle, @path) {
   @font-face {
     font-family: '@{fontname}';
     font-weight: @fontstyle;
     font-style: @fontstyle;
     src:url('@{path}.ttf') format('truetype');
   }
-}
+}*/
 
 @mainBlue: #03a9f4;
 @mainOrange: #ff9800;
@@ -29,10 +29,12 @@
 .font-face('Hind-Regular', normal, '../fonts/font_hind/Hind-Regular');
 .font-face('Hind-Semibold', normal, '../fonts/font_hind/Hind-Semibold');
 
-.font-face('Lora-Bold', normal, '../fonts/font_hind/Lora-Bold');
-.font-face('Lora-BoldItalic', normal, '../fonts/font_hind/Lora-BoldItalic');
-.font-face('Lora-Italic', normal, '../fonts/font_hind/Lora-Italic');
-.font-face('Lora-Regular', normal, '../fonts/font_hind/Lora-Regular');
+.font-face('Lora-Bold', normal, '../fonts/font_lora/Lora-Bold');
+.font-face('Lora-BoldItalic', normal, '../fonts/font_lora/Lora-BoldItalic');
+.font-face('Lora-Italic', normal, '../fonts/font_lora/Lora-Italic');
+.font-face('Lora-Regular', normal, '../fonts/font_lora/Lora-Regular');
+
+.font-face('fontawesome-webfont', normal, '../fonts/fontawesome-webfont/fontawesome-webfont');
 
 /*---------------------------------------------all---------------------------------------------*/
 .img-resp {
@@ -411,7 +413,7 @@
 	}
 }
 /*-----------------------------------------latestNews-----------------------------------------*/
-.latestNews, .ourTeam, .ourSkills {
+.latestNews, .ourTeam, .ourSkills, .reviews {
 	text-align: center;
 	padding-bottom: 80px;
 	h2 {
@@ -542,7 +544,7 @@
 }
 /*-----------------------------------------ourSkills-----------------------------------------*/
 .ourSkills {
-	padding: 58px 0 0 0;
+	padding: 58px 0 60px 0;
 	p{
 		font: 16px/30px 'Hind-Regular';
 		color: #727272;
@@ -598,13 +600,15 @@
 				ul {
 					margin: 0;
 					li {
-						.achievements-ico {
+						i {
 							width: 70px;
 							height: 70px;
 							border-radius: 3px;
 							background: #fff;
 							color: @mainOrange;
 							margin: 0;
+							font-size: 35px;
+							line-height: 70px;
 						}
 						.quantity {
 							font: 36px/36px 'Hind-Semibold';
@@ -631,6 +635,32 @@
 			content: "";
 			height: 100%;
 			vertical-align: middle;
+		}
+	}
+}
+/*-----------------------------------------reviews-----------------------------------------*/
+.reviews{
+	ul {
+		li {
+			.cite {
+				font: 16px/30px 'Lora-Italic';
+				color: #000;
+				}
+			.row {
+				div {
+					padding-left: 0;
+					padding-right: 0;
+					p {
+						text-align: left;
+						margin-bottom: 0;
+					}
+					.name {
+						font: 18px/36px 'Hind-Semibold';
+						color: #000;
+						text-transform: uppercase;
+					}
+				}			
+			}
 		}
 	}
 }

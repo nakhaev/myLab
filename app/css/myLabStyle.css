@@ -3,66 +3,78 @@
     font-family: '@{fontname}';
     font-weight: @fontstyle;
     font-style: @fontstyle;
-    src:url('@{path}.eot');
-    src:url('@{path}.eot?#iefix') format('embedded-opentype'),
-        url('@{path}.woff') format('woff'),
-        url('@{path}.ttf') format('truetype'),
-        url('@{path}.svg#icon') format('svg');
+    src:url('@{path}.ttf') format('truetype');
   }
 }*/
 @font-face {
   font-family: 'Hind-Bold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Bold.ttf') format('truetype');
+  src: url('../fonts/font_hind/Hind-Bold.eot');
+  src: url('../fonts/font_hind/Hind-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Bold.woff') format('woff'), url('../fonts/font_hind/Hind-Bold.ttf') format('truetype'), url('../fonts/font_hind/Hind-Bold.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Hind-Light';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Light.ttf') format('truetype');
+  src: url('../fonts/font_hind/Hind-Light.eot');
+  src: url('../fonts/font_hind/Hind-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Light.woff') format('woff'), url('../fonts/font_hind/Hind-Light.ttf') format('truetype'), url('../fonts/font_hind/Hind-Light.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Hind-Medium';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Medium.ttf') format('truetype');
+  src: url('../fonts/font_hind/Hind-Medium.eot');
+  src: url('../fonts/font_hind/Hind-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Medium.woff') format('woff'), url('../fonts/font_hind/Hind-Medium.ttf') format('truetype'), url('../fonts/font_hind/Hind-Medium.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Hind-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Regular.ttf') format('truetype');
+  src: url('../fonts/font_hind/Hind-Regular.eot');
+  src: url('../fonts/font_hind/Hind-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Regular.woff') format('woff'), url('../fonts/font_hind/Hind-Regular.ttf') format('truetype'), url('../fonts/font_hind/Hind-Regular.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Hind-Semibold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Semibold.ttf') format('truetype');
+  src: url('../fonts/font_hind/Hind-Semibold.eot');
+  src: url('../fonts/font_hind/Hind-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Semibold.woff') format('woff'), url('../fonts/font_hind/Hind-Semibold.ttf') format('truetype'), url('../fonts/font_hind/Hind-Semibold.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Lora-Bold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Lora-Bold.ttf') format('truetype');
+  src: url('../fonts/font_lora/Lora-Bold.eot');
+  src: url('../fonts/font_lora/Lora-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Bold.woff') format('woff'), url('../fonts/font_lora/Lora-Bold.ttf') format('truetype'), url('../fonts/font_lora/Lora-Bold.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Lora-BoldItalic';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Lora-BoldItalic.ttf') format('truetype');
+  src: url('../fonts/font_lora/Lora-BoldItalic.eot');
+  src: url('../fonts/font_lora/Lora-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-BoldItalic.woff') format('woff'), url('../fonts/font_lora/Lora-BoldItalic.ttf') format('truetype'), url('../fonts/font_lora/Lora-BoldItalic.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Lora-Italic';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Lora-Italic.ttf') format('truetype');
+  src: url('../fonts/font_lora/Lora-Italic.eot');
+  src: url('../fonts/font_lora/Lora-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Italic.woff') format('woff'), url('../fonts/font_lora/Lora-Italic.ttf') format('truetype'), url('../fonts/font_lora/Lora-Italic.svg#icon') format('svg');
 }
 @font-face {
   font-family: 'Lora-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Lora-Regular.ttf') format('truetype');
+  src: url('../fonts/font_lora/Lora-Regular.eot');
+  src: url('../fonts/font_lora/Lora-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Regular.woff') format('woff'), url('../fonts/font_lora/Lora-Regular.ttf') format('truetype'), url('../fonts/font_lora/Lora-Regular.svg#icon') format('svg');
+}
+@font-face {
+  font-family: 'fontawesome-webfont';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/fontawesome-webfont/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont/fontawesome-webfont.svg#icon') format('svg');
 }
 /*---------------------------------------------all---------------------------------------------*/
 .img-resp {
@@ -473,13 +485,15 @@
 /*-----------------------------------------latestNews-----------------------------------------*/
 .latestNews,
 .ourTeam,
-.ourSkills {
+.ourSkills,
+.reviews {
   text-align: center;
   padding-bottom: 80px;
 }
 .latestNews h2,
 .ourTeam h2,
-.ourSkills h2 {
+.ourSkills h2,
+.reviews h2 {
   font: 36px/36px 'Hind-Semibold';
   text-transform: uppercase;
   padding-bottom: 15px;
@@ -487,7 +501,8 @@
 }
 .latestNews p,
 .ourTeam p,
-.ourSkills p {
+.ourSkills p,
+.reviews p {
   font: 16px/30px 'Hind-Regular';
   max-width: 770px;
   margin: auto;
@@ -497,19 +512,22 @@
 }
 .latestNews ul li img,
 .ourTeam ul li img,
-.ourSkills ul li img {
+.ourSkills ul li img,
+.reviews ul li img {
   margin-bottom: 40px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
 }
 .latestNews ul li .date,
 .ourTeam ul li .date,
-.ourSkills ul li .date {
+.ourSkills ul li .date,
+.reviews ul li .date {
   font: 14px/14px 'Hind-Regular';
 }
 .latestNews ul li a,
 .ourTeam ul li a,
-.ourSkills ul li a {
+.ourSkills ul li a,
+.reviews ul li a {
   font: 18px/36px 'Hind-Semibold';
   color: #03a9f4;
   text-decoration: none;
@@ -517,7 +535,8 @@
 }
 .latestNews ul li a:hover,
 .ourTeam ul li a:hover,
-.ourSkills ul li a:hover {
+.ourSkills ul li a:hover,
+.reviews ul li a:hover {
   color: #ff9800;
 }
 /*-----------------------------------------ourTeam-----------------------------------------*/
@@ -611,7 +630,7 @@
 }
 /*-----------------------------------------ourSkills-----------------------------------------*/
 .ourSkills {
-  padding: 58px 0 0 0;
+  padding: 58px 0 60px 0;
 }
 .ourSkills p {
   font: 16px/30px 'Hind-Regular';
@@ -674,7 +693,7 @@
 .ourSkills .achievements .centering .centered ul {
   margin: 0;
 }
-.ourSkills .achievements .centering .centered ul li .achievements-ico {
+.ourSkills .achievements .centering .centered ul li i {
   width: 70px;
   height: 70px;
   -webkit-border-radius: 3px;
@@ -682,6 +701,8 @@
   background: #fff;
   color: #ff9800;
   margin: 0;
+  font-size: 35px;
+  line-height: 70px;
 }
 .ourSkills .achievements .centering .centered ul li .quantity {
   font: 36px/36px 'Hind-Semibold';
@@ -704,6 +725,24 @@
   content: "";
   height: 100%;
   vertical-align: middle;
+}
+/*-----------------------------------------reviews-----------------------------------------*/
+.reviews ul li .cite {
+  font: 16px/30px 'Lora-Italic';
+  color: #000;
+}
+.reviews ul li .row div {
+  padding-left: 0;
+  padding-right: 0;
+}
+.reviews ul li .row div p {
+  text-align: left;
+  margin-bottom: 0;
+}
+.reviews ul li .row div .name {
+  font: 18px/36px 'Hind-Semibold';
+  color: #000;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/

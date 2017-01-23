@@ -24,12 +24,18 @@ gulp.task('js-lib', function() {
 });
 
 gulp.task('css-lib', function() {
-    return gulp.src('bower_components/bootstrap/dist/css/bootstrap.css')
+    return gulp.src([
+        'bower_components/bootstrap/dist/css/bootstrap.css',
+        'bower_components/font-awesome/css/font-awesome.css'
+        ])
         .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('font-lib', function() {
-    return gulp.src('bower_components/bootstrap/fonts/*.*')
+    return gulp.src([
+        'bower_components/bootstrap/fonts/*.*',
+        'bower_components/font-awesome/fonts/*.*'
+        ])
         .pipe(gulp.dest('app/fonts'));
 });
 
