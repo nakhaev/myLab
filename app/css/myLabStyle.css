@@ -879,6 +879,37 @@
 .map .history ul li span {
   font: 16px/30px 'Hind-Semibold';
 }
+/*-----------------------------------------footer-----------------------------------------*/
+.footer {
+  height: 100px;
+  background: #212121;
+  color: #fff;
+  text-align: center;
+}
+.footer .footer-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 95%;
+  max-width: 1170px;
+}
+.footer .footer-content .copy {
+  text-align: center;
+}
+.footer .footer-content .footer-menu ul li a,
+.footer .footer-content .footer-menu ul li a:hover {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer .footer-content .footer-menu ul li a:hover {
+  color: #ff9800;
+}
+.footer::before {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  vertical-align: middle;
+}
 @media screen and (min-width: 768px) {
   /*---------------------------------------------start---------------------------------------------*/
   .start .header .navbar .navbar-header {
@@ -967,6 +998,13 @@
   }
   .ourSkills .achievements .centering .centered ul li .description {
     font: 11px/36px 'Hind-Semibold';
+  }
+  /*-----------------------------------------footer-----------------------------------------*/
+  .footer .footer-content .copy {
+    float: left;
+  }
+  .footer .footer-content .footer-menu {
+    float: right;
   }
 }
 @media screen and (min-width: 1170px) {

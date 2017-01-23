@@ -814,6 +814,44 @@
 	}
 
 }
+/*-----------------------------------------footer-----------------------------------------*/
+.footer {
+	height: 100px;
+	background: #212121;
+	color: #fff;
+	text-align: center;
+	.footer-content {
+		display: inline-block;
+		vertical-align: middle;
+		width: 95%;
+		max-width: 1170px;
+		.copy {
+
+			text-align: center;
+		}
+		.footer-menu {
+
+			ul {
+				li {
+					a, a:hover {
+						color: #fff;
+						text-transform: uppercase;
+						text-decoration: none;
+					}
+					a:hover {
+						color: @mainOrange;
+					}
+				}
+			}
+		}
+	}
+}
+.footer::before {
+	display: inline-block;
+	content: "";
+	height: 100%;
+	vertical-align: middle;
+}
 
 @media screen and (min-width: 768px) {
 	@import "breakpoints/breakpoint768px.less";

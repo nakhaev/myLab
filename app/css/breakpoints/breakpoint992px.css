@@ -46,3 +46,10 @@
 .ourSkills .achievements .centering .centered ul li .description {
   font: 11px/36px 'Hind-Semibold';
 }
+/*-----------------------------------------footer-----------------------------------------*/
+.footer .footer-content .copy {
+  float: left;
+}
+.footer .footer-content .footer-menu {
+  float: right;
+}
