@@ -1,73 +1,56 @@
-/*.font-face(@fontname, @fontstyle, @path) {
-  @font-face {
-    font-family: '@{fontname}';
-    font-weight: @fontstyle;
-    font-style: @fontstyle;
-    src:url('@{path}.ttf') format('truetype');
-  }
-}*/
 @font-face {
   font-family: 'Hind-Bold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Bold.eot');
-  src: url('../fonts/font_hind/Hind-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Bold.woff') format('woff'), url('../fonts/font_hind/Hind-Bold.ttf') format('truetype'), url('../fonts/font_hind/Hind-Bold.svg#icon') format('svg');
+  src: url('../fonts/font_hind/Hind-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Hind-Light';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Light.eot');
-  src: url('../fonts/font_hind/Hind-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Light.woff') format('woff'), url('../fonts/font_hind/Hind-Light.ttf') format('truetype'), url('../fonts/font_hind/Hind-Light.svg#icon') format('svg');
+  src: url('../fonts/font_hind/Hind-Light.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Hind-Medium';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Medium.eot');
-  src: url('../fonts/font_hind/Hind-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Medium.woff') format('woff'), url('../fonts/font_hind/Hind-Medium.ttf') format('truetype'), url('../fonts/font_hind/Hind-Medium.svg#icon') format('svg');
+  src: url('../fonts/font_hind/Hind-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Hind-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Regular.eot');
-  src: url('../fonts/font_hind/Hind-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Regular.woff') format('woff'), url('../fonts/font_hind/Hind-Regular.ttf') format('truetype'), url('../fonts/font_hind/Hind-Regular.svg#icon') format('svg');
+  src: url('../fonts/font_hind/Hind-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Hind-Semibold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_hind/Hind-Semibold.eot');
-  src: url('../fonts/font_hind/Hind-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_hind/Hind-Semibold.woff') format('woff'), url('../fonts/font_hind/Hind-Semibold.ttf') format('truetype'), url('../fonts/font_hind/Hind-Semibold.svg#icon') format('svg');
+  src: url('../fonts/font_hind/Hind-Semibold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lora-Bold';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_lora/Lora-Bold.eot');
-  src: url('../fonts/font_lora/Lora-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Bold.woff') format('woff'), url('../fonts/font_lora/Lora-Bold.ttf') format('truetype'), url('../fonts/font_lora/Lora-Bold.svg#icon') format('svg');
+  src: url('../fonts/font_lora/Lora-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lora-BoldItalic';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_lora/Lora-BoldItalic.eot');
-  src: url('../fonts/font_lora/Lora-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-BoldItalic.woff') format('woff'), url('../fonts/font_lora/Lora-BoldItalic.ttf') format('truetype'), url('../fonts/font_lora/Lora-BoldItalic.svg#icon') format('svg');
+  src: url('../fonts/font_lora/Lora-BoldItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lora-Italic';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_lora/Lora-Italic.eot');
-  src: url('../fonts/font_lora/Lora-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Italic.woff') format('woff'), url('../fonts/font_lora/Lora-Italic.ttf') format('truetype'), url('../fonts/font_lora/Lora-Italic.svg#icon') format('svg');
+  src: url('../fonts/font_lora/Lora-Italic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lora-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/font_lora/Lora-Regular.eot');
-  src: url('../fonts/font_lora/Lora-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/font_lora/Lora-Regular.woff') format('woff'), url('../fonts/font_lora/Lora-Regular.ttf') format('truetype'), url('../fonts/font_lora/Lora-Regular.svg#icon') format('svg');
+  src: url('../fonts/font_lora/Lora-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'fontawesome-webfont';
@@ -466,6 +449,11 @@
   opacity: 1;
 }
 .portfolio .tabWrap .tab-content .tab-pane .pf-group::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.portfolio .tabWrap .tab-content::after {
   display: block;
   content: "";
   clear: both;

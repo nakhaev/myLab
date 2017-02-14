@@ -11,28 +11,28 @@
   }
 }
 
-/*.font-face(@fontname, @fontstyle, @path) {
+.font-face-ttf-only(@fontname, @fontstyle, @path) {
   @font-face {
     font-family: '@{fontname}';
     font-weight: @fontstyle;
     font-style: @fontstyle;
     src:url('@{path}.ttf') format('truetype');
   }
-}*/
+}
 
 @mainBlue: #03a9f4;
 @mainOrange: #ff9800;
 
-.font-face('Hind-Bold', normal, '../fonts/font_hind/Hind-Bold');
-.font-face('Hind-Light', normal, '../fonts/font_hind/Hind-Light');
-.font-face('Hind-Medium', normal, '../fonts/font_hind/Hind-Medium');
-.font-face('Hind-Regular', normal, '../fonts/font_hind/Hind-Regular');
-.font-face('Hind-Semibold', normal, '../fonts/font_hind/Hind-Semibold');
+.font-face-ttf-only('Hind-Bold', normal, '../fonts/font_hind/Hind-Bold');
+.font-face-ttf-only('Hind-Light', normal, '../fonts/font_hind/Hind-Light');
+.font-face-ttf-only('Hind-Medium', normal, '../fonts/font_hind/Hind-Medium');
+.font-face-ttf-only('Hind-Regular', normal, '../fonts/font_hind/Hind-Regular');
+.font-face-ttf-only('Hind-Semibold', normal, '../fonts/font_hind/Hind-Semibold');
 
-.font-face('Lora-Bold', normal, '../fonts/font_lora/Lora-Bold');
-.font-face('Lora-BoldItalic', normal, '../fonts/font_lora/Lora-BoldItalic');
-.font-face('Lora-Italic', normal, '../fonts/font_lora/Lora-Italic');
-.font-face('Lora-Regular', normal, '../fonts/font_lora/Lora-Regular');
+.font-face-ttf-only('Lora-Bold', normal, '../fonts/font_lora/Lora-Bold');
+.font-face-ttf-only('Lora-BoldItalic', normal, '../fonts/font_lora/Lora-BoldItalic');
+.font-face-ttf-only('Lora-Italic', normal, '../fonts/font_lora/Lora-Italic');
+.font-face-ttf-only('Lora-Regular', normal, '../fonts/font_lora/Lora-Regular');
 
 .font-face('fontawesome-webfont', normal, '../fonts/fontawesome-webfont/fontawesome-webfont');
 
@@ -398,6 +398,11 @@
 					clear: both;
 				}
 			}
+		}
+		.tab-content::after {
+			display: block;
+			content: "";
+			clear: both;
 		}
 	}
 	.tabWrap::after {
