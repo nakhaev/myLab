@@ -4,18 +4,12 @@
       <meta charset="UTF8">
       <title>Untitled Document</title>
       <style>
-        html, body {
-            height: 100%;
-        }
-        #video-wrapper {
-            position: relative;
-            top: 50%;
-            margin-top: -180px;
-        }
         .video-js {
-            width: 640px;
-            height: 360px;
-            margin: 0 auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
         }
       </style>
     </head>
@@ -33,9 +27,16 @@
 
                 myPlayer: null,
                 playerData: {},
+                languages: {
+                    en: 'English',
+                    fr: 'français',
+                    de: 'Deutsch',
+                    ar: 'عربى',
+                    es: 'Español'
+                },
 
                 getPlayerData: function() {
-                    // example of url href='player-page.html?accountId=1752604059001&playerId=04ee9f58-9d08-43ea-803f-abda86776db2&videoId=3851380732001&english=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs.vtt&japanise=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs-jp.vtt&def=english'
+                    // example of url href='player-page.html?accountId=1752604059001&playerId=04ee9f58-9d08-43ea-803f-abda86776db2&videoId=3851380732001&en=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs.vtt&jp=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs-jp.vtt&def=en'
 
                     var data = window.location.search.replace('?','').split('&');
 
@@ -49,51 +50,15 @@
                     // dynamically build the track elements
                     var tracks = '';
                     for(key in this.playerData) {
-                        switch (key) {
-                            case 'english':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"no\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"no\" label=\"' + key + '\">';
-                                }
-                                break;
-                            case 'arabic':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"ar\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"ar\" label=\"' + key + '\">';
-                                }
-                                break;
-                            case 'french':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"fr\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"fr\" label=\"' + key + '\">';
-                                }
-                                break;
-                            case 'german':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"de\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"de\" label=\"' + key + '\">';
-                                }
-                                break;
-                            case 'spanish':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"sp\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"sp\" label=\"' + key + '\">';
-                                }
-                                break;
-                            case 'japanise':
-                                if(key == this.playerData.def) {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"jp\" label=\"' + key + '\" mode = \"showing\" default>';
-                                } else {
-                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"jp\" label=\"' + key + '\">';
-                                }
-                                break;
-                            default:
-                                console.log();
+                        if(this.playerData[key].indexOf('.vtt')!=-1) {
+                            var srclang = key.replace('subtitles[', '').replace(']', '');
+                            var label = (this.languages[srclang]) ? this.languages[srclang] : srclang;
+                            if(srclang == this.playerData.default_subtitles) {
+                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\" mode=\"showing\" default>';
+                            } else {
+                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\">';
+                            }
+                            console.log(tracks);
                         }
                     }
 
