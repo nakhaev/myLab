@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
     <head>
       <meta charset="UTF8">
       <title>Untitled Document</title>
@@ -26,6 +25,7 @@
       <script type="text/JavaScript">
       (function() {
             var player = {
+
                 init: function() {
                     this.getPlayerData();
                     this.addPlayer();
@@ -35,40 +35,83 @@
                 playerData: {},
 
                 getPlayerData: function() {
-                    // example of url href='player-page.html?{"videoData":{"accountId":"1752604059001","playerId":"04ee9f58-9d08-43ea-803f-abda86776db2","videoId":"3851380732001"},"captionData":{"enTrack":{"src":"http://solutions.brightcove.com/bcls/assets/captions/intro-vcs.vtt","srclang":"en","label":"English"},"jpTrack":{"src":"http://solutions.brightcove.com/bcls/assets/captions/intro-vcs-jp.vtt","srclang":"jp","label":"Japanise"}}}'
-        
-                    var data = window.location.search.replace('?','').split('%22').join('"');
-                    this.playerData = JSON.parse(data);
-                    console.log(this.playerData.captionData);
-                    
+                    // example of url href='player-page.html?accountId=1752604059001&playerId=04ee9f58-9d08-43ea-803f-abda86776db2&videoId=3851380732001&english=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs.vtt&japanise=http://solutions.brightcove.com/bcls/assets/captions/intro-vcs-jp.vtt&def=english'
+
+                    var data = window.location.search.replace('?','').split('&');
+
+                    for(key=0; key < data.length; key++) {
+                      var temp = data[key].split('=');
+                      this.playerData[temp[0]] = temp[1];
+                    }
                 },
 
                 addPlayer: function () {
-                    //dynamically build the track element
+                    // dynamically build the track elements
                     var tracks = '';
-                    for(key in this.playerData.captionData) {
-                        if(tracks == '') {
-                        var temp = '<track kind=\"captions\" src=\"' + this.playerData.captionData[key].src + '\" srclang=\"' + this.playerData.captionData[key].srclang + '\" label=\"' + this.playerData.captionData[key].label + '\" mode = \"showing\" default>';
-                    } else {
-                        var temp = '<track kind=\"captions\" src=\"' + this.playerData.captionData[key].src + '\" srclang=\"' + this.playerData.captionData[key].srclang + '\" label=\"' + this.playerData.captionData[key].label + '\">';
+                    for(key in this.playerData) {
+                        switch (key) {
+                            case 'english':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"no\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"no\" label=\"' + key + '\">';
+                                }
+                                break;
+                            case 'arabic':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"ar\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"ar\" label=\"' + key + '\">';
+                                }
+                                break;
+                            case 'french':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"fr\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"fr\" label=\"' + key + '\">';
+                                }
+                                break;
+                            case 'german':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"de\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"de\" label=\"' + key + '\">';
+                                }
+                                break;
+                            case 'spanish':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"sp\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"sp\" label=\"' + key + '\">';
+                                }
+                                break;
+                            case 'japanise':
+                                if(key == this.playerData.def) {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"jp\" label=\"' + key + '\" mode = \"showing\" default>';
+                                } else {
+                                    tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"jp\" label=\"' + key + '\">';
+                                }
+                                break;
+                            default:
+                                console.log();
+                        }
                     }
-                        tracks = tracks + temp;
-                    }
-                    console.log(tracks);
 
+                    // dynamically build the player video element
+                    var playerHTML = '<video id=\"myPlayer\" data-video-id=\"' + this.playerData.videoId + '\"  data-account=\"' + this.playerData.accountId + '\" data-player=\"' + this.playerData.playerId + '\" data-embed=\"default\" class=\"video-js\" controls>' + tracks + '</video>';
 
-                  // dynamically build the player video element
-                  var playerHTML = '<video id=\"myPlayer\" data-video-id=\"' + this.playerData.videoData.videoId + '\"  data-account=\"' + this.playerData.videoData.accountId + '\" data-player=\"' + this.playerData.videoData.playerId + '\" data-embed=\"default\" class=\"video-js\" controls>' + tracks + '</video>';
-                  // inject the player code into the DOM
-                  document.getElementById('video-wrapper').innerHTML = playerHTML;
-                  // add and execute the player script tag
-                  var s = document.createElement('script');
-                  s.src = "//players.brightcove.net/" + this.playerData.videoData.accountId + "/" + this.playerData.videoData.playerId + "_default/index.min.js";
-                  document.body.appendChild(s);
-                  s.onload = this.callback;
+                    // inject the player code into the DOM
+                    document.getElementById('video-wrapper').innerHTML = playerHTML;
+
+                    // add and execute the player script tag
+                    var s = document.createElement('script');
+                    s.src = "//players.brightcove.net/" + this.playerData.accountId + "/" + this.playerData.playerId + "_default/index.min.js";
+                    document.body.appendChild(s);
+                    s.onload = this.callback;
                 },
 
                 callback: function() {
+                    this.myPlayer = videojs('myPlayer');
                     this.myPlayer.play();
                 }
             }
@@ -77,5 +120,4 @@
         })();
       </script>
     </body>
-
 </html>
