@@ -54,8 +54,7 @@
                             var srclang = key.replace('subtitles[', '').replace(']', '');
                             var label = (this.languages[srclang]) ? this.languages[srclang] : srclang;
                             if(srclang == this.playerData.default_subtitles) {
-                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\" default>'
-                                //tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\">';
+                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\" mode = \"showing\" default>'
                             } else {
                                 tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\">';
                             }
@@ -79,26 +78,6 @@
                 callback: function() {
                     this.myPlayer = videojs("myPlayer")
                     this.myPlayer.play();
-                    //console.log(this.myPlayer);
-                    //this.myPlayer.controlBar.captionsButton.items[1].controlText_ = '';
-
-                    /*this.myPlayer.on("play", function () {
-                        var textTracks = this.options_.tracks;
-
-                        if(textTracks && textTracks.length > 0) {
-
-                            for (var i = 0; i < textTracks.length; i++) {
-                                var textTrackDetails = textTracks[i];
-                                if (textTrackDetails.default == true) {
-                                    textTrackDetails.mode = "showing";
-
-                                    // console.log("## Selected subtitle: " + i + " - " + textTrackDetails.src);
-                                    break;
-                                }
-                            }
-                        }
-                        console.log(textTracks);
-                    });*/
                 }
             }
 
