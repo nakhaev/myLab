@@ -50,15 +50,14 @@
                     // dynamically build the track elements
                     var tracks = '';
                     for(key in this.playerData) {
-                        if(this.playerData[key].indexOf('.vtt')!=-1) {
+                        if(key.indexOf('subtitles[')!=-1) {
                             var srclang = key.replace('subtitles[', '').replace(']', '');
                             var label = (this.languages[srclang]) ? this.languages[srclang] : srclang;
                             if(srclang == this.playerData.default_subtitles) {
-                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\" mode = \"showing\" default>'
+                                tracks += '<track kind=\"subtitles\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\" mode = \"showing\" default>'
                             } else {
-                                tracks += '<track kind=\"captions\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\">';
+                                tracks += '<track kind=\"subtitles\" src=\"' + this.playerData[key] + '\" srclang=\"' + srclang + '\" label=\"' + label + '\">';
                             }
-                            console.log(tracks);
                         }
                     }
 
@@ -69,8 +68,9 @@
                     document.getElementById('video-wrapper').innerHTML = playerHTML;
 
                     // add and execute the player script tag
+                    var mod = (this.playerData.mod) ? this.playerData.mod : '_default';
                     var s = document.createElement('script');
-                    s.src = "//players.brightcove.net/" + this.playerData.accountId + "/" + this.playerData.playerId + "_default/index.min.js";
+                    s.src = "//players.brightcove.net/" + this.playerData.accountId + "/" + this.playerData.playerId + mod + "/index.min.js";
                     document.body.appendChild(s);
                     s.onload = this.callback;
                 },
